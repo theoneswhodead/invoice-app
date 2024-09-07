@@ -32,8 +32,11 @@ export default function RootLayout({
                 enableSystem
                 disableTransitionOnChange
               >
-             <BarMenu dark={true}/>
-            {children}
+                <div className="flex flex-col lg:flex-row lg:w-full">
+                <BarMenu dark={true}/>
+                {children}
+                </div>
+
          </ThemeProvider>
         </body>
     </html>
