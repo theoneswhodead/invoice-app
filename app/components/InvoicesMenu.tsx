@@ -1,7 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 
-const InvoicesMenu = () => {
+interface InvoicesMenuProps {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const InvoicesMenu = ({setIsOpen}: InvoicesMenuProps) => {
   return (
     <section className=''>
       <div className='font-Leagie_Spartan flex justify-around items-center px-[25px] py-[37px] sm:px-[48px] sm:py-[62px] lg:w-full  '>
@@ -24,7 +28,7 @@ const InvoicesMenu = () => {
           </div>
         </div>
 
-        <button className='bg-purple hover:bg-light_purple w-[90px] h-[44px] sm:w-[150px] sm:h-[48px] rounded-full flex items-center cursor-pointer'>
+        <button className='bg-purple hover:bg-light_purple w-[90px] h-[44px] sm:w-[150px] sm:h-[48px] rounded-full flex items-center cursor-pointer' onClick={() => setIsOpen(prev => !prev)}>
           <div className='bg-white rounded-full h-[32px] w-[32px] p-[11px] m-[6px]'>
             <Image 
               src="/icon-plus.svg"

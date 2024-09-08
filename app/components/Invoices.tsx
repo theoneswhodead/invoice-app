@@ -1,7 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
+import NewInvencies from './NewInvencies';
 
-const Invoices = () => {
+interface InvoicesProps {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Invoices = ({isOpen, setIsOpen}: InvoicesProps) => {
+
+  console.log('Inv', isOpen)
   return (
     <div className='flex flex-col justify-center items-center'>
       <div className='mb-[42px] mt-[66px] sm:mb-[66px] sm:mt-[80px]'>
@@ -19,6 +27,11 @@ const Invoices = () => {
         <p className='text-[15px] text-cool_gray tracking-[-0.1px] w-[230px]'>Create an invoice by clicking the 
         New button and get started</p>
       </div>
+      {
+        isOpen && (
+          <NewInvencies setIsOpen={setIsOpen}/>
+        )
+      }
     </div>
   )
 }
