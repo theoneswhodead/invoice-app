@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import NewInvoicesForm from './NewInvoicesForm';
 interface InvoicesMenuProps {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   }
@@ -7,19 +8,22 @@ interface InvoicesMenuProps {
 
 const NewInvencies = ({setIsOpen}: InvoicesMenuProps) => {
   return (
-    <div className='absolute inset-0 bg-white px-[32px] py-[24px]'>
+    <div className='absolute inset-0 bg-white mx-[32px] my-[24px] font-Leagie_Spartan'>
       <button className='flex gap-[22px] items-center ' onClick={() => setIsOpen(prev => !prev)}>
-      <Image 
-            src="/icon-arrow-left.svg"
-            width={7}
-            height={12}
-            alt='Go Back'
-            className='sm:w-[242px] smh-[200px]'
-        />
+            <Image 
+                src="/icon-arrow-left.svg"
+                width={7}
+                height={12}
+                alt='Go Back'
+            />
         <p className='text-[15px] font-bold'>Go Back</p>
       </button>
       <div>
-        <h1>New Invoice</h1>
+        <h1 className='text-[32px] tracking-[-0.5px] font-bold my-[32px]'>New Invoice</h1>
+        
+        <NewInvoicesForm />
+        
+  
       </div>
     </div>
   )

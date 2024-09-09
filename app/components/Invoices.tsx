@@ -18,7 +18,7 @@ const Invoices = ({isOpen, setIsOpen}: InvoicesProps) => {
             width={195}
             height={160}
             alt='There is nothing here'
-            className='sm:w-[242px] smh-[200px]'
+            className='sm:w-[242px] sm:h-[200px]'
         />
       </div>
 
