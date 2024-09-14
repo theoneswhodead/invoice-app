@@ -21,7 +21,7 @@ const NewInvencies = ({setIsOpen}: InvoicesMenuProps) => {
       <div>
         <h1 className='text-[32px] tracking-[-0.5px] font-bold my-[32px]'>New Invoice</h1>
         
-        <NewInvoicesForm />
+        <NewInvoicesForm setIsOpen={setIsOpen} />
         
   
       </div>

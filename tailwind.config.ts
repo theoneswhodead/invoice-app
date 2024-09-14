@@ -33,6 +33,7 @@ const config = {
         "rich_black": "#141625", 
         "gray": "#373B53",
         "light_gray": "#979797",
+        "button": "#F9FAFE",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
